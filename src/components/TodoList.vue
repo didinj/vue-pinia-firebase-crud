@@ -1,8 +1,8 @@
 <template>
-    <ul>
-        <li v-for="todo in store.todos" :key="todo.id">
+    <ul class="todo-list">
+        <li v-for="todo in store.todos" :key="todo.id" class="todo-item">
             {{ todo.text }}
-            <button @click="store.deleteTodo(todo.id)">Delete</button>
+            <button @click="store.deleteTodo(todo.id)" class="delete-button">Delete</button>
         </li>
     </ul>
 </template>
